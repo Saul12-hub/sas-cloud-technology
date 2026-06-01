@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo de Ventas</title>
+
+<link rel="stylesheet" href="ventas.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h2><i class="fa-solid fa-file-invoice-dollar"></i> Módulo de Ventas</h2>
+</header>
+
+<div class="container">
+
+  <!-- FACTURA -->
+  <div class="card">
+
+    <h3>Nueva Factura</h3>
+
+    <form>
+
+      <!-- CLIENTE -->
+      <div class="grid">
+
+        <div class="input-box">
+          <label>Cliente</label>
+          <input type="text" placeholder="Nombre del cliente">
+        </div>
+
+        <div class="input-box">
+          <label>NIT / DPI</label>
+          <input type="text" placeholder="CUI o NIT">
+        </div>
+
+        <div class="input-box">
+          <label>Fecha</label>
+          <input type="date">
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- PRODUCTOS -->
+      <h4>Detalle de Productos</h4>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><input type="text" placeholder="Producto"></td>
+            <td><input type="number" value="1"></td>
+            <td><input type="number" value="0.00"></td>
+            <td><input type="text" disabled></td>
+            <td>
+              <button type="button" class="btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="btn-add">
+        <i class="fa fa-plus"></i> Agregar Producto
+      </button>
+
+      <!-- TOTALES -->
+      <div class="totales">
+
+        <div>
+          <label>Subtotal</label>
+          <input type="text" value="Q0.00" disabled>
+        </div>
+
+        <div>
+          <label>IVA</label>
+          <input type="text" value="Q0.00" disabled>
+        </div>
+
+        <div>
+          <label>Total</label>
+          <input type="text" value="Q0.00" disabled>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-save">
+        <i class="fa-solid fa-floppy-disk"></i> Guardar Factura
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- HISTORIAL -->
+  <div class="card">
+
+    <h3>Historial de Ventas</h3>
+
+    <table class="list">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cliente</th>
+          <th>Fecha</th>
+          <th>Total</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>1</td>
+          <td>Juan Pérez</td>
+          <td>2026-06-01</td>
+          <td>Q850.00</td>
+          <td><span class="badge paid">Pagado</span></td>
+          <td>
+            <button class="btn-view"><i class="fa fa-eye"></i></button>
+            <button class="btn-print"><i class="fa fa-print"></i></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Empresa ABC</td>
+          <td>2026-06-01</td>
+          <td>Q1,200.00</td>
+          <td><span class="badge pending">Pendiente</span></td>
+          <td>
+            <button class="btn-view"><i class="fa fa-eye"></i></button>
+            <button class="btn-print"><i class="fa fa-print"></i></button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+</body>
+</html>

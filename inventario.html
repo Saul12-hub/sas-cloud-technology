@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo de Inventario</title>
+
+<link rel="stylesheet" href="inventario.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h2><i class="fa-solid fa-boxes-stacked"></i> Módulo de Inventario</h2>
+</header>
+
+<div class="container">
+
+  <!-- RESUMEN -->
+  <div class="cards">
+
+    <div class="card small">
+      <h3>Productos</h3>
+      <p>120</p>
+    </div>
+
+    <div class="card small">
+      <h3>Stock Bajo</h3>
+      <p>8</p>
+    </div>
+
+    <div class="card small">
+      <h3>Valor Inventario</h3>
+      <p>Q45,000</p>
+    </div>
+
+  </div>
+
+  <!-- FORMULARIO PRODUCTO -->
+  <div class="card">
+
+    <h3>Registrar Producto</h3>
+
+    <form>
+
+      <div class="grid">
+
+        <div class="input-box">
+          <label>Nombre del producto</label>
+          <input type="text" placeholder="Ej: Teclado Logitech">
+        </div>
+
+        <div class="input-box">
+          <label>Categoría</label>
+          <input type="text" placeholder="Ej: Tecnología">
+        </div>
+
+        <div class="input-box">
+          <label>Precio de venta</label>
+          <input type="number" placeholder="0.00">
+        </div>
+
+        <div class="input-box">
+          <label>Stock inicial</label>
+          <input type="number" placeholder="0">
+        </div>
+
+        <div class="input-box">
+          <label>Stock mínimo</label>
+          <input type="number" placeholder="0">
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-save">
+        Guardar Producto
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- LISTADO INVENTARIO -->
+  <div class="card">
+
+    <h3>Inventario Actual</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Categoría</th>
+          <th>Stock</th>
+          <th>Precio</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>Mouse Logitech</td>
+          <td>Tecnología</td>
+          <td>25</td>
+          <td>Q150</td>
+          <td><span class="badge ok">OK</span></td>
+          <td>
+            <button class="btn-edit"><i class="fa fa-edit"></i></button>
+            <button class="btn-danger"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Teclado USB</td>
+          <td>Tecnología</td>
+          <td>3</td>
+          <td>Q200</td>
+          <td><span class="badge low">Bajo</span></td>
+          <td>
+            <button class="btn-edit"><i class="fa fa-edit"></i></button>
+            <button class="btn-danger"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+</body>
+</html>

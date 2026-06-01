@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+.header {
+    background: #0f172a;
+    color: white;
+    padding: 15px 20px;
+}
+
+/* CONTENEDOR */
+.container {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+/* RESUMEN CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card.small {
+    text-align: center;
+}
+
+.card.small h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.card.small p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #111;
+}
+
+/* FORMULARIO */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.input-box label {
+    font-size: 14px;
+    color: #333;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* BOTÓN */
+.btn-save {
+    width: 100%;
+    padding: 12px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-save:hover {
+    background: #059669;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background: #f1f5f9;
+}
+
+/* BOTONES ACCIÓN */
+.btn-edit {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* BADGES */
+.badge {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.badge.ok {
+    background: #22c55e;
+}
+
+.badge.low {
+    background: #f59e0b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
