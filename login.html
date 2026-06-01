@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión | SAS Cloud Technology</title>
+
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+  <div class="login-box">
+
+    <div class="login-header">
+      <h2>SAS Cloud Technology</h2>
+      <p>Acceso a la plataforma</p>
+    </div>
+
+    <form action="auth.php" method="POST">
+
+      <div class="input-group">
+        <i class="fa-solid fa-user"></i>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="password" placeholder="Contraseña" required>
+      </div>
+
+      <button type="submit" class="btn-login">
+        Iniciar Sesión
+      </button>
+
+    </form>
+
+    <div class="login-footer">
+      <p>¿Problemas de acceso? Contacta al administrador</p>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
